@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Device info</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		
+		<!-- jQueryMobile -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.mobile-1.1.0.js"></script>
+		
+		<!-- PhoneGap -->
+		<script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+	
+		    // Wait for PhoneGap to load
+		    //
+		    document.addEventListener("deviceready", onDeviceReady, false);
+		
+		    // PhoneGap is ready
+		    //
+		    function onDeviceReady() {
+		        var element = document.getElementById('deviceProperties');
+		
+		        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+		                            'Device PhoneGap: ' + device.cordova  + '<br />' + 
+		                            'Device Platform: ' + device.platform + '<br />' + 
+		                            'Device UUID: '     + device.uuid     + '<br />' + 
+		                            'Device Version: '  + device.version  + '<br />';
+		    }
+	
+	    </script>
+	    
+	    <!-- Custom -->
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header">
+				<a data-icon="home" href="index.html">Domov</a>
+				<h1>Device info</h1>
+			</div>
+			<div data-role="content">
+				<p id="deviceProperties">Loading device properties...</p>
+			</div>
+		</div>
+	</body>
+</html>

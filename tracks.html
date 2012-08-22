@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tracks</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		
+		<!-- jQueryMobile -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.1.0.css" />
+		<script src="js/jquery-1.7.2.js"></script>
+		<script src="js/jquery.mobile-1.1.0.js"></script>
+		
+		<!-- PhoneGap -->
+		<script type="text/javascript" charset="utf-8" src="js/cordova-1.7.0.js"></script>
+		
+		<!-- Google map -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtfUfi6xvIVwc0FWh-oJAf4Fk8Ye93v80&sensor=true"></script>
+		
+		<!-- Custom -->
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" charset="utf-8" src="js/common.js"></script>
+		<script type="text/javascript" charset="utf-8" src="js/tracks.js"></script>
+	</head>
+	<body>
+		<div id="tracksPage" data-role="page">
+			<div data-role="header">
+				<a data-icon="home" href="index.html">Domov</a>
+				<h1>Seznam poti</h1>
+			</div>
+			<div data-role="content">
+				<ul id="tracks" data-role="listview"></ul>
+			</div>
+		</div>
+		
+		<div id="mapPage" data-role="page" style="height:100%;">
+			<div data-role="header">
+				<a data-icon="back" href="javascript:goBack();">Nazaj</a>
+				<h1>Seznam lokacij</h1>
+			</div>
+			<div data-role="content" style="height:100%; padding: 0;">
+				<div id="map_canvas" style="height:100%;"></div>
+	        </div>
+		</div>
+	</body>
+</html>
